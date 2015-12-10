@@ -1,0 +1,366 @@
+
+/***************************************************************
+MOBILE MENU
+***************************************************************/
+
+#mobile-menu {display: none;}
+
+#overlay
+{
+  display: none;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 200;
+  z-index: 100;
+  opacity: 0.5;
+}
+
+/***************************************************************
+FADE IN
+***************************************************************/
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:0.5s;
+  -moz-animation-duration:0.5s;
+  animation-duration:0.5s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.4s;
+-moz-animation-delay: 0.4s;
+animation-delay: 0.4s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 0.7s;
+-moz-animation-delay: 0.7s;
+animation-delay: 0.7s;
+}
+
+/***************************************************************
+
+NAV & MENU
+
+***************************************************************/
+
+.menu {
+    background: #2e3842;
+    left: -350px;
+    height: 100%;
+    position: fixed;
+    width: 330px;
+}
+
+  .menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0em 0 0 2em;
+  }
+
+  .menu li {
+      font-size: .9em;
+      text-transform: uppercase;
+      line-height: 25px;
+  }
+
+  .menu li .fa {
+      padding-right: 1.2em;
+  }
+
+  .menu li a:hover {
+      color: #fff;
+  }
+
+  .icon-close {
+      cursor: pointer;
+      padding-left: 19em;
+      padding-top: 1.5em;
+      max-width: inherit;
+  }
+
+.icon-menu {
+    cursor: pointer;
+    max-width: 10em;
+    overflow: hidden;
+    position: relative;
+    padding: 1.5em 0 0 1.5em;
+    
+}
+
+body.is-menu-visible #menu {
+    -moz-transform: translateX(0em);
+    -webkit-transform: translateX(0em);
+    -ms-transform: translateX(0em);
+    transform: translateX(0em);
+}     
+
+/***************************************************************
+
+BANNERS
+
+***************************************************************/
+
+.home-banner h1 {
+  margin-top: 15%;
+}
+
+.about-banner h1 {
+  margin-top: 2%;
+}
+
+.contact-banner h1 {
+  margin-top: 13%;
+}
+
+.project-banner h1 {
+  margin-top: 13%;
+}
+
+
+
+.home-banner {
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../../images/banner.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../../images/banner.jpg");
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../../images/banner.jpg");
+  background-image: linear-gradient(top, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../../images/banner.jpg");
+  background-size: cover;
+  color: white;
+  background-color: #2e3842;
+  height: 53vh;
+  min-height: 28em;
+  overflow: hidden;
+  text-align: center;
+}
+
+.about-banner {
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../../images/banner4.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../../images/banner4.jpg");
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../../images/banner4.jpg");
+  background-image: linear-gradient(top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../../images/banner4.jpg");
+  background-size: cover;
+  color: white;
+  background-color: #2e3842;
+  height: 70vh;
+  min-height: 28em;
+  overflow: hidden;
+  text-align: center;
+}
+
+.project-banner {
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../../images/banner3.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../../images/banner3.jpg");
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../../images/banner3.jpg");
+  background-image: linear-gradient(top, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../../images/banner3.jpg");
+  background-size: cover;
+  color: white;
+  height: 50vh;
+  min-height: 28em;
+  overflow: hidden;
+  text-align: center;
+}
+
+.contact-banner {
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../../images/banner2.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../../images/banner2.jpg");
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../../images/banner2.jpg");
+  background-image: linear-gradient(top, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../../images/banner2.jpg");
+  background-size: cover;
+  color: white;
+  height: 80vh;
+  min-height: 28em;
+  overflow: hidden;
+  text-align: center;
+}
+
+
+.banner p {
+  font-weight: 300;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+/***************************************************************
+
+Home-Description
+
+***************************************************************/
+
+.home-description {
+  text-align: center;
+}
+
+.home-description p {
+  width: 95%;
+}
+
+.hover-button:hover {
+  background-color: none;
+  color: white;
+  border-color: white;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  -ms-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+/***************************************************************
+
+ABOUT
+
+***************************************************************/
+
+.profile {
+  margin-top: 6%;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.about {
+  margin-top: -10px;
+  width: 60%;
+  margin: auto;
+}
+
+.about-icons {
+  margin-top: 2%;
+  font-size: 2em;
+  margin-right: 10px;
+}
+
+.about-icons:hover {
+  color: white;
+}
+
+.about-2 {
+  margin-top: 8%;
+  }
+
+.about-hr {
+  margin-top: -5px;
+  margin-bottom: 10px;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; }
+
+.cv-title {
+  font-size: 1.5em;
+  letter-spacing: .1em;
+  font-weight: 700;
+}
+
+.cv-header {
+  margin-top: 20px;
+  font-size: 1em;
+  letter-spacing: .075em;
+  text-align: left;
+  font-weight: 500;
+}
+
+.cv-body {
+  text-align: left;
+  
+}
+
+/***************************************************************
+
+PROJECTS
+
+***************************************************************/
+
+
+.project {font-size: .95em;}
+
+.text-preview {
+  margin-top: 7%; 
+  margin-left: 4%;
+}
+
+.hr {
+  width: 80%;
+  margin-top: 60px;
+}
+
+.project-button:hover {
+  background-color: #f0cb7d;
+  color: white;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  -ms-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.preview {
+    max-width: 100%;
+    box-shadow: 1px 1px 2px #bbb;
+}
+
+/***************************************************************
+
+CONTACT
+
+***************************************************************/
+
+.contact {
+  margin-left: 4%;
+}
+
+.contact-mail:hover {
+  background-color: none;
+  color: white;
+  border-color: white;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  -ms-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.button-submit {border-color: #1DD3B0;}
+
+
+/***************************************************************
+
+FOOTER
+
+***************************************************************/
+
+.footer {
+    background-size: cover;
+    border-top: 1px solid #f3f3f3;
+    width: 100%;
+    color: #2e3842;
+    margin-top: 10%
+}
+
+/* FOOTER */
+.copyright {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: -1em;
+}
+    .copyright li {
+        list-style: none;
+        display: inline-block;
+        margin-left: 1em;
+        font-size: .8em;
+    }
+
+
+    
